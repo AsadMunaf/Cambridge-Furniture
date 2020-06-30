@@ -16,10 +16,14 @@ const productSchema = new mongoose.Schema({
        unique:true,
        default:shortid.generate()
    },
-   descriotion:{
+   description:{
        type:String,
        required:true
    },
+   mediaUrl:{
+    type:String,
+    required:true
+   }
 })
 
 export default mongoose.models.Product || mongoose.model('Product', productSchema);
